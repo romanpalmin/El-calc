@@ -200,28 +200,7 @@ PSEC.Controller = function (config, utils) {
                     }
 
 
-                    /*amount = 0;
-                     reinvest = 0;
-                     feeInPeriod = 0;
-                     balance += _innerReinvest;
-                     cash = currentProfit - _innerReinvest;
-                     if (balance >= config.amount.min) {
-                     if (isDebug) {
-                     console.log('Проверяем баланс, если хватает на реинвест, пересчитываем');
-                     }
-
-                     amount = balance;
-                     balance = 0;
-                     feeInPeriod = CalculatePeriodRent(amount, periodType);
-                     _innerReinvest = (+feeInPeriod + CalculatePeriodRent(GetActiveSummary(activeAmounts).totalAmount, periodType)) * (+_reinvestPercent);
-                     reinvest = _innerReinvest;
-                     cash = (+feeInPeriod + CalculatePeriodRent(GetActiveSummary(activeAmounts).totalAmount, periodType)) - reinvest;
-
-                     if (reinvest <= config.amount.min) {
-                     balance += reinvest;
-                     reinvest = 0;
-                     }
-                     }*/
+                   
                 }
                 _totalAmount = GetActiveSummary(activeAmounts).totalAmount + amount;
                 _totalCash = GetActiveSummary(summaryAmounts).totalCash + cash;
