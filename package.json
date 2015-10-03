@@ -1,0 +1,28 @@
+{
+  "name": "elcalc",
+  "version": "1.0.0",
+  "description": "Capitalisation Elevrus calculator",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-jshint": "^1.11.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.1",
+    "jquery": "^2.1.4",
+    "jquery-ui": "^1.10.5",
+    "jshint-stylish": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "elevrus",
+    "calculator"
+  ],
+  "author": "Roman Palmin",
+  "license": "ISC"
+}

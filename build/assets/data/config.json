@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "errors": [],
+  "data": {
+    "amount": {
+      "min": 3000,
+      "max": 500000
+    },
+    "months": {
+      "min": 1,
+      "max": 48
+    },
+    "period": {
+      "min": 1,
+      "max": 36
+    },
+    "reinvest": {
+      "min": 0,
+      "max": 100
+    },
+    "rates": {
+      "rate1": 0.8,
+      "rate2": 0.9,
+      "rate3": 1.0
+    },
+    "days": 365,
+    "months": 12
+  }
+}
