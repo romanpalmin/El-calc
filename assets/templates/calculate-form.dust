@@ -1,0 +1,128 @@
+<div class="b-center">
+
+        <div class="b-elcalc-title b-strong"><img src="assets/images/circle-elcalc-logo-small.png">Калькулятор доходности с учетом ежемесячной капитализации</div>
+    </div>
+    <div class="deposit_calculator_wrap">
+        <div>
+            <h2 class="calc_choice_vklad_summ_title">Выберите сумму взноса:</h2>
+
+            <div class="calc_choise_summ_wrap calc_vklad_summ_wrap">
+                <div class="slider_money_wrap">
+                    <div class="calc_money_line">
+                        <div>3 тыс.</div>
+                        <div>100 тыс.</div>
+                        <div>200 тыс.</div>
+                        <div>300 тыс.</div>
+                        <div>400 тыс.</div>
+                        <div>500 тыс.</div>
+                    </div>
+                    <div class="calc_slider_wrap">
+                        <div class="calc_minus_btn b-elcalc-minus-btn_amount"></div>
+                        <div class="slider_wrapper_content_block">
+                            <div class="slider_wrapper_content_block">
+                                <div class="b-elcalc-slider_amount"></div>
+                            </div>
+                        </div>
+                        <div class="calc_plus_btn b-elcalc-plus-btn_amount"></div>
+
+                    </div>
+                    <div class="calc_procent_line">
+                        <div>0.8%</div>
+                        <div></div>
+                        <div>0.9%</div>
+                        <div>1%</div>
+                    </div>
+                </div>
+                <div class="calc_input_summ_wrap">
+                    <input type="text" name="amount" id="amount" value="">
+                    <span class="calc_submit_valute_content">Р</span>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div>
+            <!-- % реинвеста -->
+            <h2 class="calc_choice_vklad_summ_title">Выберите % реинвеста:</h2>
+
+            <div class="calc_choise_summ_wrap calc_vklad_summ_wrap">
+                <div class="slider_money_wrap">
+                    <div class="calc_money_line">
+                        <div>0%</div>
+                        <div>50%</div>
+                        <div>100%</div>
+
+                    </div>
+                    <div class="calc_slider_wrap">
+                        <div class="calc_minus_btn b-elcalc-minus-btn_percent"></div>
+                        <div class="slider_wrapper_content_block">
+                            <div class="slider_wrapper_content_block">
+                                <div class="b-elcalc-slider_percent"></div>
+                            </div>
+                        </div>
+                        <div class="calc_plus_btn b-elcalc-plus-btn_percent"></div>
+
+                    </div>
+
+                </div>
+                <div class="calc_input_summ_wrap">
+                    <input type="text" name="percent" id="percent" value="">
+                    <span class="calc_submit_valute_content">%</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!-- период -->
+            <h2 class="calc_choice_vklad_summ_title">Выберите период:</h2>
+
+            <div class="calc_choise_summ_wrap calc_vklad_summ_wrap">
+                <div class="slider_money_wrap">
+                    <div class="calc_money_line">
+                        <div>1 мес.</div>
+                        <div>12 мес.</div>
+                        <div>24 мес.</div>
+                        <div>36 мес.</div>
+
+                    </div>
+                    <div class="calc_slider_wrap">
+                        <div class="calc_minus_btn b-elcalc-minus-btn_period"></div>
+                        <div class="slider_wrapper_content_block">
+                            <div class="slider_wrapper_content_block">
+                                <div class="b-elcalc-slider_period"></div>
+                            </div>
+                        </div>
+                        <div class="calc_plus_btn b-elcalc-plus-btn_period"></div>
+
+                    </div>
+
+                </div>
+                <div class="calc_input_summ_wrap">
+                    <input type="text" name="period" id="period" value="">
+                    <span class="calc_submit_valute_content">М</span>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </div>
+
+    <div class="b-result-summary"></div>
+    <div class="b-result"></div>
+
+    <br/>
+
+    <div class="b-buttons">
+        <div class="b-left">
+        {?homepage}
+            <a href="{homepage}">
+                <div class="b-orange_btn">Информация о проекте</div>
+            </a>
+        {/homepage}
+        </div>
+        <div class="b-right">
+            {?login}<a href="https://elevrus.com/ref/{login}">
+                <div class="b-orange_btn">Регистрация в проекте</div>
+            </a>
+            {/login}
+        </div>
+    </div>

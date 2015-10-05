@@ -7,34 +7,32 @@ var PSEC = {};
 PSEC.Calc = function (config, controller, utils) {
 
     //  inputs
-    var amountInput = $('.b-elcalc-amount');
-    var monthsInput = $('.b-elcalc-months');
-    var reinvestPercentInput = $('.b-elcalc-percent');
+    var amountInput;
+    var monthsInput;
+    var reinvestPercentInput;
+    var amountInputControl;
+    var periodInputControl;
+    var percentInputControl;
 
-    var amountInputControl = $('#amount');
-    var periodInputControl = $('#period');
-    var percentInputControl = $('#percent');
+    var inputsList = [];
 
-    var inputsList = [amountInput, monthsInput, reinvestPercentInput,
-        amountInputControl, percentInputControl, periodInputControl];
-
-    var sliderAmount = $('.b-elcalc-slider_amount');
-    var sliderPercent = $('.b-elcalc-slider_percent');
-    var sliderPeriod = $('.b-elcalc-slider_period');
+    //  sliders
+    var sliderAmount;
+    var sliderPercent;
+    var sliderPeriod;
 
 
     //  buttons
-
-    var amountMinusBtn = $('.b-elcalc-minus-btn_amount');
-    var amountPlusBtn = $('.b-elcalc-plus-btn_amount');
-    var percentPlusBtn = $('.b-elcalc-plus-btn_percent');
-    var percentMinusBtn = $('.b-elcalc-minus-btn_percent');
-    var periodPlusBtn = $('.b-elcalc-plus-btn_period');
-    var periodMinusBtn = $('.b-elcalc-minus-btn_period');
+    var amountMinusBtn;
+    var amountPlusBtn;
+    var percentPlusBtn;
+    var percentMinusBtn;
+    var periodPlusBtn;
+    var periodMinusBtn;
 
     //  blocks
-    var resultTable = $('.b-result');
-    var resultSummary = $('.b-result-summary');
+    var resultTable;
+    var resultSummary;
 
     //  vars
     var amount = 0;
@@ -46,10 +44,61 @@ PSEC.Calc = function (config, controller, utils) {
 
     //  первичная инициализация срипта
     function init() {
-        bindButtons();
-        bindInputs();
-        bindSliders();
-        setDefaultValue();
+        renderPage();
+    }
+
+    /**
+     * Формируем страницу из шаблонов
+     */
+    function renderPage() {
+        // строим форму
+        var calculateForm = '';
+        var user =  {login: config.person.login, homepage:config.person.homepage};
+        dust.render('calculate-form.dust', user, function (err, out) {
+            calculateForm = out;
+            $('#calculate-form').html(calculateForm);
+
+            //  inputs
+            amountInput = $('.b-elcalc-amount');
+            monthsInput = $('.b-elcalc-months');
+            reinvestPercentInput = $('.b-elcalc-percent');
+
+            amountInputControl = $('#amount');
+            periodInputControl = $('#period');
+            percentInputControl = $('#percent');
+
+            inputsList = [amountInput, monthsInput, reinvestPercentInput,
+                amountInputControl, percentInputControl, periodInputControl];
+
+            sliderAmount = $('.b-elcalc-slider_amount');
+            sliderPercent = $('.b-elcalc-slider_percent');
+            sliderPeriod = $('.b-elcalc-slider_period');
+
+            //  buttons
+            amountMinusBtn = $('.b-elcalc-minus-btn_amount');
+            amountPlusBtn = $('.b-elcalc-plus-btn_amount');
+            percentPlusBtn = $('.b-elcalc-plus-btn_percent');
+            percentMinusBtn = $('.b-elcalc-minus-btn_percent');
+            periodPlusBtn = $('.b-elcalc-plus-btn_period');
+            periodMinusBtn = $('.b-elcalc-minus-btn_period');
+
+            // result
+            resultTable = $('.b-result');
+            resultSummary = $('.b-result-summary');
+
+
+
+            //  vars
+            var amount = 0;
+            var period = 12;
+            var months = 12;
+
+            bindButtons();
+            bindInputs();
+            bindSliders();
+            setDefaultValue();
+
+        });
     }
 
     function setDefaultValue() {

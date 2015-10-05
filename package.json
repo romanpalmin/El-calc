@@ -4,6 +4,7 @@
   "description": "Capitalisation Elevrus calculator",
   "main": "gulpfile.js",
   "dependencies": {
+    "dustjs-linkedin": "^2.7.2",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-cssmin": "^0.1.7",
@@ -15,7 +16,11 @@
     "jquery-ui": "^1.10.5",
     "jshint-stylish": "^2.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-dust": "^2.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "webpack": "^1.12.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

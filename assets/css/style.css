@@ -18,7 +18,6 @@ body {
     width: 250px;
 }
 
-
 .main-body {
     text-align: center;
     width: 380px;
@@ -227,23 +226,29 @@ body {
     text-align: center;
 }
 
-.b-buttons{
+.b-buttons {
     width: 50%;
     text-align: center;
     margin: 0 auto;
     white-space: nowrap;
     word-wrap: normal;
     word-break: keep-all;
+    position: relative;
+
 }
 
-.b-buttons .b-right{
-    float: right;
-}
-.b-buttons .b-left{
+.b-buttons .b-right {
     float: left;
+    position: relative;
+
 }
 
-.b-elcalc-summary_amount{
+.b-buttons .b-left {
+    float: right;
+    position: relative;
+}
+
+.b-elcalc-summary_amount {
     font-size: 34px;
     font-weight: bold;
     text-transform: uppercase;
@@ -273,4 +278,20 @@ input.b-orange_btn {
 .b-orange_btn:hover {
     background: rgba(0, 0, 0, 0) url("../images/orange_btn_hover.png") repeat-x scroll 0 0;
     text-decoration: none;
+}
+
+/* Добавляем адаптивность */
+
+@media screen and (max-width: 900px) {
+    .b-buttons .b-right, .b-buttons .b-left {
+        float: inherit;
+    }
+
+    .b-buttons{
+        width: 100%;
+    }
+
+    .b-elcalc-title img {
+        display: none;
+    }
 }

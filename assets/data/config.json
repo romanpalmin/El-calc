@@ -24,6 +24,10 @@
       "rate3": 1.0
     },
     "days": 365,
-    "months": 12
+    "months": 12,
+    "person": {
+      "login":"jromkin",
+      "homepage": "http://elevrus.jromkin.ru"
+    }
   }
 }
