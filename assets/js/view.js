@@ -159,8 +159,8 @@ PSEC.Calc = function (config, controller, utils) {
 
     function bindSliders() {
         sliderAmount.slider({
-            min: 3000,
-            max: 500000,
+            min: config.amount.min,
+            max: config.amount.max,
             orientation: "horizontal",
             range: "min",
             animate: true,
@@ -170,8 +170,8 @@ PSEC.Calc = function (config, controller, utils) {
         });
 
         sliderPercent.slider({
-            min: 0,
-            max: 100,
+            min: config.reinvest.min,
+            max: config.reinvest.max,
             orientation: "horizontal",
             range: "min",
             animate: true,
@@ -180,8 +180,8 @@ PSEC.Calc = function (config, controller, utils) {
             }
         });
         sliderPeriod.slider({
-            min: 1,
-            max: 36,
+            min: config.period.min,
+            max: config.period.max,
             orientation: "horizontal",
             range: "min",
             animate: true,
