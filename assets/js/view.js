@@ -39,11 +39,23 @@ PSEC.Calc = function (config, controller, utils) {
     var period = 12;
     var months = 12;
 
+    // валютные коэффициенты
+    //var currencyCoefficient = 0.016;//1;
+    //var minAmountCoefficient = 8.33334;
+
+    var currentController;
+    var calc;
+
     init();
 
 
     //  первичная инициализация срипта
     function init() {
+        //console.warn(config.amount.min);
+        //config.amount.min = config.amount.min * currencyCoefficient;
+        //console.warn(config.amount.min);
+        //console.warn(config.amount.min * minAmountCoefficient);
+        //config.amount.max = config.amount.max * currencyCoefficient;
         renderPage();
     }
 
@@ -53,7 +65,7 @@ PSEC.Calc = function (config, controller, utils) {
     function renderPage() {
         // строим форму
         var calculateForm = '';
-        var user =  {login: config.person.login, homepage:config.person.homepage};
+        var user = {login: config.person.login, homepage: config.person.homepage};
         dust.render('calculate-form.dust', user, function (err, out) {
             calculateForm = out;
             $('#calculate-form').html(calculateForm);
@@ -87,11 +99,10 @@ PSEC.Calc = function (config, controller, utils) {
             resultSummary = $('.b-result-summary');
 
 
-
             //  vars
             var amount = 0;
-            var period = 12;
-            var months = 12;
+            var period = config.months;
+            var months = config.months;
 
             bindButtons();
             bindInputs();
@@ -102,9 +113,13 @@ PSEC.Calc = function (config, controller, utils) {
     }
 
     function setDefaultValue() {
-        periodInputControl.val(12).trigger('input');
+        periodInputControl.val(months).trigger('input');
         percentInputControl.val(50).trigger('input');
-        amountInputControl.val(25000).trigger('input');
+        //console.log(config.amount.min);
+        //console.log(minAmountCoefficient);
+        //console.log(config.amount.min * minAmountCoefficient);
+        //amountInputControl.val(3400);
+        amountInputControl.val(25000).trigger('input');//(utils.Round(config.amount.min * minAmountCoefficient)).trigger('input');
     }
 
     //  привязываем поведение инпутов
