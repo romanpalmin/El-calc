@@ -48,19 +48,6 @@ var jsConcat = function(){
         .pipe(gulp.dest(buildPath + '/assets/js'));
 };
 
-/*
-gulp.task('js-concat', function () {
-    gulp.src([
-        srcPath + '/js/view.min.js',
-        srcPath + '/js/controller.min.js',
-        srcPath + '/js/utils.min.js',
-        srcPath + '/js/appRun.min.js'])
-        .pipe(concat('main.all.min.js'))
-        .pipe(gulp.dest(buildPath + '/assets/js'));
-});
-*/
-
-
 gulp.task('img-compress', function() {
     gulp.src(srcPath + '/images/*')
         .pipe(imagemin())
