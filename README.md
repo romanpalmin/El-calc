@@ -7,6 +7,6 @@ Calculator of profitability taking into account the capitalization
 Калькулятор расчеты прибыльности с учетом капитализации
 
 ## Technologies used / Использованные технологии:
-JavaScript, jQuery, CSS, Gulp
+JavaScript, jQuery, CSS, Gulp, Dust
 
 ## Demo: http://dev.romanpalmin.com/samples/elcalc/
