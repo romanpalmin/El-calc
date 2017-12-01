@@ -1,12 +1,12 @@
 # ElCalc v.1.2
 
-##ENG
+## ENG
 Calculator of profitability taking into account the capitalization
 
-##RUS
+## RUS
 Калькулятор расчеты прибыльности с учетом капитализации
 
-##Technologies used / Использованные технологии:
+## Technologies used / Использованные технологии:
 JavaScript, jQuery, CSS, Gulp
 
-##Demo: http://dev.romanpalmin.com/samples/elcalc/
+## Demo: http://dev.romanpalmin.com/samples/elcalc/
